@@ -1,0 +1,10 @@
+
+scalar DateTime
+type Presupuesto @table(name: "presupuesto") {
+  id: ID! @column(name: "id")
+  nombre: String! @column(name: "nombre")
+  monto: Float! @column(name: "monto")
+  fechaCreacion: DateTime! @createdAt @column(name: "fecha_creacion")
+  fechaActualizacion: DateTime! @updatedAt @column(name: "fecha_actualizacion")
+  fechaEliminacion: DateTime @deletedAt @column(name: "fecha_eliminacion") 
+}
